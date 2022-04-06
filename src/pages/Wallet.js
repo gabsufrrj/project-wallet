@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import coinsApi from '../actions/actionWallet';
 import { exchangesApi } from '../actions/actionExpenses';
+import Table from '../components/Table';
 
 class Wallet extends React.Component {
   constructor() {
@@ -100,21 +101,7 @@ class Wallet extends React.Component {
           </select>
           <button type="submit" onClick={ this.onSubmit }> Adicionar despesa </button>
         </form>
-        <table>
-          <header>
-            <p>
-              Descrição
-            </p>
-            <p>Tag</p>
-            <p>Método de pagamento</p>
-            <p>Valor</p>
-            <p>Moeda</p>
-            <p>Câmbio utilizado</p>
-            <p>Valor convertido</p>
-            <p>Moeda de conversão</p>
-            <p>Editar/Excluir</p>
-          </header>
-        </table>
+        <Table />
       </>
     );
   }
