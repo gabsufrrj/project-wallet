@@ -104,9 +104,6 @@ class Wallet extends React.Component {
           <header>
             <p>
               Descrição
-              <p>
-                { description }
-              </p>
             </p>
             <p>Tag</p>
             <p>Método de pagamento</p>
