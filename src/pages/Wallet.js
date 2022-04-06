@@ -40,7 +40,7 @@ class Wallet extends React.Component {
   }
 
   render() {
-    const { userEmail, currencies, description, total } = this.props;
+    const { userEmail, currencies, total } = this.props;
     const { value } = this.state;
     return (
       <>
@@ -126,7 +126,6 @@ class Wallet extends React.Component {
 const mapStateToProps = (state) => ({
   userEmail: state.user.email,
   currencies: state.wallet.currencies,
-  description: state.wallet.expenses.description,
   total: state.wallet.total,
 });
 

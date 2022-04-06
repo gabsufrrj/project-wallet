@@ -47,7 +47,8 @@ const wallet = (state = INITIAL_STATE, action) => {
   case 'ADD_EXPENSES':
     return {
       ...state,
-      expenses: [...state.expenses, mountExpenses(action.exchangeRates, action.userData, state.expenses)],
+      expenses: [...state.expenses,
+        mountExpenses(action.exchangeRates, action.userData, state.expenses)],
       total:
         totalValueOfExpenses([...state.expenses,
           mountExpenses(action.exchangeRates, action.userData)]),
